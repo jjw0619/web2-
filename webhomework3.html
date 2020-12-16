@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>web结课大作业</title>
+        <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+        }
+        ul{
+            list-style-type:none;
+        }
+        a{
+            text-decoration:none;
+            color:black;
+        }
+        /*清除浮动*/
+        .clear:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+        }
+        .head{
+            width:1518px;
+            height:65px;
+            background-color:rgb(243, 245, 247);
+            margin:0 auto;
+        }
+        .baoxue{
+            float: right;
+        }
+        .logo{
+            float:left;
+            margin:7px 100px 0px 100px;
+        }
+        .nav ul{
+            display:none;
+        }
+        .nav ul>li{
+            width:140px;
+            height:60px;
+            line-height:60px;
+            background-color:rgba(243, 245, 247,0.9);
+            text-align:center;
+            border-bottom: 1px solid rgba(192, 192, 192,0.4);
+
+        }
+
+        .nav ul>li>a{
+            border-left:2px solid rgba(0,0,0,0);
+            width:120px;
+            height:30px;
+            line-height:30px;
+                        
+        }
+        .nav ul>li:hover a{
+            border-left:2px solid orange;
+        }
+        .nav>li{
+            float:left;
+            border-right:1px solid  rgba(192, 192, 192,0.4);
+            margin-top:0px;
+            width:140px;
+            text-align:center;
+            position:relative;
+
+        }
+        .frist1{
+            border-left:1px solid  rgba(192, 192, 192,0.4);
+        }
+        .nav a{
+            display:inline-block;
+            width:140px;
+            height:65px;
+            text-align:center;
+            line-height:65px;
+            font-weight:400;
+            font-family:Microsoft YaHei;
+        }
+        .nav>li:hover>a{
+            background-color: #696969;
+            color: orange;
+        }
+        .nav>li:hover ul{
+            display:block;
+        }
+
+        .last{
+            margin-right:100px;
+        }
+        .banner{
+            height: 712px;
+            width: 1536px;
+            margin: 0 auto;
+
+        }
+        .form{
+            padding-top:15px;
+            float:left;
+        }
+        .search{
+            float:left;
+            font-family:Microsoft YaHei;
+            font-weight:400;
+            color:#BFBFBF;
+            line-height:16px;
+            font-size:14px;
+            width:200px;
+            height:35px;
+            border-radius:30px;
+            padding-left:19px;
+            border:1px solid orange;
+            margin-right:10px;
+        }
+
+        .submit{
+            border:none;
+            background-color:orange;
+            font-weight:400;
+            font-family:Microsoft YaHei;
+            color:white;
+            float:left;
+            width:43px;
+            height:37px;
+            border-radius:30px;
+        }
+
+        .banner a{
+            font-weight:400;
+            font-family:Microsoft YaHei;
+            color:white;
+            position:relative;
+        }
+        .ann{
+            font-family:Microsoft YaHei;
+            margin-top:10px;
+            font-style:italic;
+            letter-spacing:10px;
+
+        }
+        .row{
+            width: 1518px;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            position: relative;
+            margin: 0 auto;
+
+        }
+        .line1{
+            height: 2px;
+            width: 400px;
+            background-color: orange;
+            position: absolute;
+            top: 40px;
+            left: 100px;
+        }
+        .line2{
+            height: 2px;
+            width: 400px;
+            background-color: orange;
+            position: absolute;
+            top: 40px;
+            right: 100px;
+        }
+        .news{
+            width:1518px;
+            margin:0px auto;
+        }
+        .box1{
+            position:relative;
+            margin-left: 210px;
+            width:300px;
+            height:200px;
+            background:url('./images/happy.jpg') no-repeat center center;
+        }
+        .box2{
+            position:relative;
+            margin-left:100px;
+            width:300px;
+            height:200px;
+            background:url('./images/zhizhe.jpg') no-repeat center center;
+            background-color:rgb(32, 22, 49);
+        }
+        .box3{
+            position:relative;
+            margin-left:100px;
+            width:300px;
+            height:200px;
+            background:url('./images/CG.png') no-repeat center center;
+        }
+        .news>div{
+            float:left;
+        }
+        .news>div:hover{
+            box-shadow:0px 4px 10px 0px rgba(118,118,118,0.5);
+        }
+        .news>div>a{
+            display:inline-block;
+            width:300px;
+            height:50px;
+            line-height:50px;
+            background-color:rgba(0, 0, 0, 0.5);
+            font-family:Microsoft YaHei;
+            font-size:20px;
+            position:absolute;
+            bottom:0px;
+            color:white;
+            text-indent:1em;
+        }
+        .button3>a{
+            display:block;
+            font-family:Microsoft YaHei;
+            font-weight:500;
+            font-size: 23px;
+            color:white;
+            line-height: 50px;
+            letter-spacing:1px;
+            background-color: rgba(0,164,255,1);
+            width: 240px;
+            height: 50px;
+            margin: 20px auto;
+            text-align: center;
+            border-radius:5px;
+        }
+        .button3>a:hover{
+            background-color: rgb(70, 164, 255);
+        }
+        .newhero{
+            width: 1514px;
+            height: 439px;
+            margin: 40px auto;
+            border: 2px solid rgba(192, 192, 192,0.4);
+            background-color: white;
+        }
+        .newhero>img{
+            float: left;
+            vertical-align: bottom ;
+        }
+        .text1{
+            width: 700px;
+            margin-top: 100px;
+            float: left;
+            font-family:Microsoft YaHei;
+            font-style:italic;
+            font-weight:500;
+            font-size: 50px;
+            color:#808080;
+            letter-spacing:8px;
+        }
+        .text2{
+            width:700px ;
+            float: left;
+            font-family:Microsoft YaHei;
+            font-weight:400;
+            font-size: 25px;
+            color:#8FBC8F;
+            letter-spacing:3px;
+        }
+        .text3{
+            width:600px ;
+            float: left;
+            font-family:Microsoft YaHei;
+            font-weight:300;
+            font-size: 20px;
+            color:#696969;
+            letter-spacing:1px;
+            margin-top: 10px;
+        }
+        .button4>a{
+            float: left;
+            display:block;
+            font-family:Microsoft YaHei;
+            font-weight:500;
+            font-size: 23px;
+            color:white;
+            line-height: 50px;
+            letter-spacing:1px;
+            background-color:orange;
+            width: 240px;
+            height: 50px;
+            margin-top: 20px;
+            text-align: center;
+            border-radius:5px;
+        }
+        .button4>a:hover{
+            background-color: rgb(255, 190, 0);
+        }
+        .pa{
+            float: left;
+            font-family:Microsoft YaHei;
+            font-weight:500;
+            color:#BFBFBF;
+            line-height:16px;
+            font-size:17px;
+            width:200px;
+            height:35px;
+            border-radius:30px;
+            padding-left:19px;
+            border:1px solid orange;
+            margin-top: 5px;
+        }
+        .login{
+            margin-top: 5px;
+            border:none;
+            background-color:orange;
+            font-weight:400;
+            font-family:Microsoft YaHei;
+            color:white;
+            float:left;
+            width:219px;
+            height:37px;
+            border-radius:30px;
+        }
+        .ow2{
+            width: 1514px;
+            height: 350px;
+            margin: 0 auto;
+            border: 2px solid rgba(192, 192, 192,0.4);
+            background-color: white;
+            margin-bottom: 50px;
+        }
+        .ow2>img{
+            float: right;
+        }
+        .text4{
+            margin-left:100px;
+            width:600px ;
+            float: left;
+            font-family:Microsoft YaHei;
+            font-weight:300;
+            font-size: 20px;
+            color:#696969;
+            letter-spacing:1px;
+            margin-top: 20px;
+        }
+        .text5{
+            margin-left:50px;
+            width: 700px;
+            margin-top: 100px;
+            float: left;
+            font-family:Microsoft YaHei;
+            font-style:italic;
+            font-weight:500;
+            font-size: 50px;
+            color:#808080;
+            letter-spacing:8px;
+        }
+        .appear{
+            width: 1518px;
+            position: relative;
+            background: url('./images/banner98.jpeg') no-repeat center center;
+            height:500px;
+            margin:0 auto;
+        }
+        .page{
+            position: absolute;
+            left: 280px;
+            top: 100px;
+        }
+        .text6{
+            width: 1000px;
+            font-family:Microsoft YaHei;
+            font-style:italic;
+            font-weight:500;
+            font-size: 70px;
+            color:#333333;
+            letter-spacing:8px;
+            text-align: center;
+        }
+        .text7{
+            width: 1000px;
+            font-family:Microsoft YaHei;
+            font-style:italic;
+            font-weight:600;
+            font-size: 40px;
+            color:#333333;
+            letter-spacing:3px;
+            text-align: center;
+        }
+        .bottom{
+        	position: relative;
+            margin: 0 auto;
+            width: 1518px;
+            height: 400px;
+            background:#202020 ;
+        }
+        .text8{
+            padding-top: 100px;
+            padding-left: 150px;
+            width:1200px ;
+            font-family:Microsoft YaHei;
+            font-weight:300;
+            font-size: 10px;
+            color:#F3F5F7;
+            letter-spacing:1px;
+            margin-top: 10px;
+        }
+        .text9{
+            padding-left: 600px;
+        }
+        .bottom1{
+        	position: absolute;
+        	top: 35px;
+        	left: 360px;
+        }
+        .bottom1 li{
+        	float: left;
+        }
+        .bottom1 a{
+        	border-right:2px solid rgba(192, 192, 192,0.4);
+        	display: block;
+        	text-align: center;
+        	width: 200px;
+        	font-family:Microsoft YaHei;
+            font-weight:300;
+            font-size: 14px;
+            color:#F3F5F7;
+            letter-spacing:1px;
+        }
+        .bottom1 .last1{
+        	border:none; 
+        }
+        .video{
+        	width: 1518px;
+        	height: 100px;
+        	margin: 0 auto;
+        }
+        .text10{
+        	margin-left: 20px;
+            width: 700px;
+            font-family:Microsoft YaHei;
+            font-style:italic;
+            font-weight:500;
+            font-size: 35px;
+            color:#808080;
+            letter-spacing:8px;
+        }
+        .text11{
+        	height: 2px;
+        	width: 240px;
+        	margin-left: 80px;
+        	margin-top: 20px;
+        	background-color: #808080;
+        }
+        .video2{
+        	width: 1518px;
+        	height: 300px;
+        	margin: 0 auto;
+        }
+        .video2>a{
+        	width: 320px;
+        	margin-left: 45px;
+        }
+        .video2>a>img{
+        	width: 300px;
+        	height: 200px;
+        	border: 10px solid #F3F5F7;
+        	vertical-align: bottom;
+        }
+        .video2>a:hover img{
+        	width: 320px;
+        	height: 220px;
+        	border: none;
+        }
+        .renwu{
+        	width: 1518px;
+        	height: 350px;
+        	margin: 0 auto;
+        	position: relative;
+        }
+        .bigrow{
+        	background-color: rgba(128, 128, 128, 0.4);
+        	height: 100px;
+        	width: 1518px;
+        	position: absolute;
+        	top: 160px;
+        	z-index: 1;
+        }
+        .renwu a{
+            font-family:Microsoft YaHei;
+            font-style:italic;
+            font-weight:500;
+            font-size: 100px;
+            color:#808080;
+            letter-spacing:4px;
+            position: absolute;
+            top: 160px;
+            left: 200px;
+            z-index: 2;
+        }
+        .renwu>img{
+        	position: absolute;
+        	right: 300px;
+        	z-index: 3;
+        }
+        .button1{
+            cursor: pointer;
+            width:50px;
+            height:70px;
+            line-height:70px;
+            text-align:center;
+            background-color:rgba(0,164,255,1);
+            font-size: 15px;
+            border-radius:10px;
+            position:fixed;
+            left:20px;
+            top:20px;  
+            color: white;
+            z-index: 100;
+        } 
+        .button2{
+            cursor: pointer;
+            width:50px;
+            height:70px;
+            line-height:70px;
+            text-align:center;
+            background-color:orange;
+            font-size: 15px;
+            border-radius:10px;
+            position:fixed;
+            left:20px;
+            top:100px;
+            color: white;
+            z-index: 100;
+        }
+        .big>span{
+            color: white;
+            cursor: pointer;
+            display: block;
+            width: 30px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 30px;
+            position: absolute;
+            top: 350px;
+            text-align: center;
+            background: gray;
+            opacity: 0.5;
+        }
+        #left{
+            left:30px;
+        }
+        #right{
+            right:30px;
+        }
+        .big{
+            position: relative;
+            width:1536px;
+            height: 712px;
+            overflow: hidden;
+            margin:0 auto;
+        }
+        .slide{
+            width:7680px;
+            height: 712px;
+            position: relative;
+        }
+        .slider{
+            width:1536px;
+            height: 712px;
+            display: inline-block;
+            float: left;
+        }
+        #tooltip {
+            position: fixed;
+            background: #FAFAD2;
+            display: inline;
+            border: 1px solid black;
+        }
+        body{
+            background-color:#F3F5F7;
+            position: relative;
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="button1" onclick="windowForward()">前进</div>
+        <div class="button2" onclick="windowBack()">后退</div>
+        <div class="head clear">
+        <img class="logo" src="./images/logo2.png" alt="logo">
+        <ul class="nav ">
+            <li class="frist1"><a href="#">游戏</a></li>
+            <li><a href="#">英雄</a></li>
+            <li><a href="#">活动</a></li>
+            <li><a href="#">新闻</a></li>
+            <li class="last"><a href="#">社区</a></li>
+        </ul>
+        <form class="form clear">
+            <input type="text" placeholder="输入搜索内容" class="search" />
+            <input type="button" value="搜索" class="submit" />
+        </form>
+        <img class="baoxue" src="./images/baoxue.png">
+
+        </div>
+        <div class="banner" id="banner">
+            <div class="big"  id="tool">
+                <div class="slide" id="slide" style="left: -1536px;">
+                    <div class="slider"><img src="./images/image5.jpg" alt="b5"></div>
+                    <div class="slider"><img src="./images/image2.jpg" alt="b2"></div>
+                    <div class="slider"><img src="./images/image3.jpg" alt="b3"></div>
+                    <div class="slider"><img src="./images/image4.jpg" alt="b4"></div>
+                    <div class="slider"><img src="./images/image5.jpg" alt="b5"></div>
+                    <div class="slider"><img src="./images/image2.jpg" alt="b2"></div>
+                </div>
+                <span id="left"><</span>
+                <span id="right">></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="line1"></div>
+            <h1 class="ann">重要公告</h1>
+            <div class="line2"></div>
+        </div>
+
+        <div class="news clear">
+            <div class="box1"><a href="https://ow.blizzard.cn/article/news/1413">周年庆典2020 现已上线</a></div>
+            <div class="box2"><a href="https://ow.blizzard.cn/article/news/1355">全新系统：预设职责 现已上线</a></div>
+            <div class="box3"><a href="https://ow.blizzard.cn/article/news/1056">各英雄CG动画</a></div>
+        </div>
+        <div class="button3"><a href="#">查看新闻</a></div>
+        <div class="newhero clear">
+            <img src="./images/hero1.jpg">
+            <div class="text1">新英雄：回声</div>
+            <div class="text2">现已上线</div>
+            <div class="text3">《守望先锋》中的第32名英雄是一位采用了尖端科技的多功能进化型机器人，由米娜·廖博士制造。她可以帮助人类完成许多工作，在战场上也可以发挥作用。</div>
+            <div class="button4"><a href="#" >新英雄详情</a></div>
+        </div>
+        <div class="ow2 clear">
+            <img src="./images/image1.jpg">
+            <div class="text5">即将发售！</div>
+            <div class="text4">《守望先锋2》是暴雪计划推出的第一人称射击游戏，将会有PVE与PVP双模式，并且英雄天赋系统也将随之一同出现。</div>
+        </div>
+        <div class="video">
+        	<div class="text10">精彩锦集</div>
+        	<div class="text11"></div>
+        </div>
+        <div class="video2">
+        	<a href="#"><img src="./images/image100.jpg"></a>
+        	<a href="#"><img src="./images/image96.jpeg"></a>
+        	<a href="#"><img src="./images/image99.jpg"></a>
+        	<a href="#"><img src="./images/image98.jpg"></a>
+        </div>
+        <div class="renwu">
+        	<div class="bigrow"></div>
+        	<div><a href="#">即刻加入！</a></div>
+        	<img src="./images/ais2.png">
+        </div>
+        <div class="appear">
+            <div class="page">
+                <div class="text6">这个世界需要更多的英雄！</div>
+                <div class="text7">加入我们，让我们一起守望</div>
+            </div>
+        </div>
+        <div class="bottom">
+        	<ul class="bottom1 clear">
+        		<li><a href="#">隐私条款</a></li>
+        		<li><a href="#">在线客服</a></li>
+        		<li><a href="#">加入我们</a></li>
+        		<li><a class="last1" href="#">制作人员</a></li>
+        	</ul>
+            <div class="text8">©2020 暴雪娱乐有限公司版权所有 由上海网之易网络科技发展有限公司运营 著作权侵权 | 新广出审[2016]378号文网游进字[2016]0025号 | 沪网文号〔2017〕9633-727号 | 增值电信业务经营许可证编号：沪B2－20080012 | 沪ICP备：沪B2－20080012互联网违法和不良信息举报电话：0571-28090163 沪公网安备 31011502022167号 | 上海市网络游戏行业自律公约</div>
+            <img class="text9" src="./images/baoxue2.jpg">
+        </div>
+    </body>
+    <script type="text/javascript" src="课堂笔记.js"></script>
+</html>
